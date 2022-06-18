@@ -1,18 +1,32 @@
 import React from "react";
-import { experimentalStyled as styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import { Container } from "@mui/material";
-
+import Service from "../Service/Service";
+import cavity from "../../../images/cavity.png";
+import floride from "../../../images/fluoride.png";
+import Whitening from "../../../images/whitening.png";
+const services = [
+  {
+    name: "Cavity",
+    description:
+      "Cavities are permanently damaged areas in the hard surface of your teeth that develop into tiny openings or holes. Cavities, also called tooth decay or caries",
+    img: cavity,
+  },
+  {
+    name: "floride",
+    description:
+      "Cavities are permanently damaged areas in the hard surface of your teeth that develop into tiny openings or holes. Cavities, also called tooth decay or caries",
+    img: floride,
+  },
+  {
+    name: "Whitening",
+    description:
+      "Cavities are permanently damaged areas in the hard surface of your teeth that develop into tiny openings or holes. Cavities, also called tooth decay or caries",
+    img: Whitening,
+  },
+];
 const Services = () => {
-  const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-    ...theme.typography.body2,
-    padding: theme.spacing(2),
-    textAlign: "center",
-    color: theme.palette.text.secondary,
-  }));
   return (
     <Container>
       <Box sx={{ flexGrow: 1 }}>
@@ -21,10 +35,8 @@ const Services = () => {
           spacing={{ xs: 2, md: 3 }}
           columns={{ xs: 4, sm: 8, md: 12 }}
         >
-          {Array.from(Array(6)).map((_, index) => (
-            <Grid item xs={2} sm={4} md={4} key={index}>
-              <Item>xs=2</Item>
-            </Grid>
+          {services.map((service) => (
+            <Service service={service}></Service>
           ))}
         </Grid>
       </Box>
