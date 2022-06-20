@@ -1,7 +1,7 @@
 import React from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import { Container } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 import Service from "../Service/Service";
 import cavity from "../../../images/cavity.png";
 import floride from "../../../images/fluoride.png";
@@ -28,8 +28,15 @@ const services = [
 ];
 const Services = () => {
   return (
-    <Container>
+    <Container sx={{ mb: 5 }}>
       <Box sx={{ flexGrow: 1 }}>
+        <Typography variant="h6" component="div" sx={{ fontWeight: 500, m: 3 }}>
+          OUR SERVICES
+        </Typography>
+        <Typography variant="h4" component="div" sx={{ fontWeight: 600, m: 3 }}>
+          SERVICES WE PROVIDE
+        </Typography>
+        ;
         <Grid
           container
           spacing={{ xs: 2, md: 3 }}
