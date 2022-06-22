@@ -9,11 +9,11 @@ const apointBg = {
 };
 const AppointmentBanner = () => {
   return (
-    <Box style={apointBg} sx={{ flexGrow: 1 }}>
+    <Box style={apointBg} sx={{ flexGrow: 1, marginTop: "200px" }}>
       <Grid container spacing={2}>
         <Grid item xs={12} md={6}>
           <img
-            style={{ height: "500px", width: "500px" }}
+            style={{ height: "500px", width: "500px", marginTop: "-120px" }}
             src={`${doctor}`}
             alt=""
           />
