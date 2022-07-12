@@ -33,19 +33,26 @@ const AppointmentBanner = () => {
               style={{ color: "#4CE6E6" }}
               sx={{ my: 4 }}
             >
-              appointment
+              Appointment
             </Typography>
             <Typography
-              variant="h4"
+              variant="h3"
               style={{ color: "white", fontWeight: 500 }}
             >
-              Make an appointment Today{" "}
+              Make an appointment
+              <br /> Today{" "}
             </Typography>
-            <Typography variant="h6" style={{ color: "white" }} sx={{ my: 4 }}>
+            <Typography
+              variant="h6"
+              style={{ color: "white", fontWeight: 100 }}
+              sx={{ my: 4 }}
+            >
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's
             </Typography>
-            <Button variant="contained">Contained</Button>
+            <Button style={{ backgroundColor: "#4CE6E6" }} variant="contained">
+              Contained
+            </Button>
           </Box>
         </Grid>
       </Grid>
