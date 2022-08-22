@@ -1,5 +1,5 @@
 import React from "react";
-import Navigation from "../../shared/Navigation";
+import Navigation from "../../shared/Navigation/Navigation";
 import AppointmentBanner from "../AppointmentBanner/AppointmentBanner";
 import Services from "../Services/Services";
 import TopBanner from "../TopBanner/TopBanner";
