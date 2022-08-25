@@ -8,12 +8,12 @@ const bGcHaIr = {
   background: `url(${bgChair})`,
 };
 
-const AppointmentHeader = () => {
+const AppointmentHeader = ({ date, setDate }) => {
   return (
     <Container style={bGcHaIr}>
       <Grid container>
         <Grid Item xs={12} md={6}>
-          <Calender></Calender>
+          <Calender date={date} setDate={setDate}></Calender>
         </Grid>
 
         <Grid Item xs={12} md={6}>
