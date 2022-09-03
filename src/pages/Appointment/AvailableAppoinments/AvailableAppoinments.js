@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
 import { Container } from "@mui/system";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Booking from "../Booking/Booking";
 const bookings = [
   {
@@ -41,12 +41,18 @@ const bookings = [
   },
 ];
 const AvailableAppoinments = ({ date }) => {
+  const [services, setServices] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/service")
+      .then((res) => res.json())
+      .then((data) => setServices(data));
+  }, []);
   return (
     <Container>
       <h1>Appointments available at{date.toDateString()} </h1>
       <Grid container spacing={2}>
-        {bookings.map((booking) => (
-          <Booking id={booking.id} booking={booking}></Booking>
+        {services.map((service) => (
+          <Booking id={service.id} service={service} date={date}></Booking>
         ))}
       </Grid>
       ;
